@@ -27,7 +27,7 @@ class App
 
   def list_all_books
     puts 'Database is empty! Add a book.' if @books.empty?
-    @book.each { |book| puts "[Book] Title: #{book.title}, Author: #{book.author}" }
+    @books.each { |book| puts "[Book] Title: #{book.title}, Author: #{book.author}" }
   end
 
   def list_all_persons
@@ -50,10 +50,10 @@ class App
   end
 
   def create_student
-    puts 'Creaate a new student'
+    puts 'Create a new student'
     print 'Enter name: '
     name = gets.chomp
-    print 'Enter student age'
+    print 'Enter student age: '
     age = gets.chomp.to_i
     print 'Has parent permission? [y/n]: '
     parent_permission = gets.chomp.downcase
