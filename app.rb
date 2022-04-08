@@ -49,7 +49,7 @@ class App
     end
   end
 
-  def create_student 
+  def create_student
     puts 'Creaate a new student'
     print 'Enter name: '
     name = gets.chomp
