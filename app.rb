@@ -49,7 +49,7 @@ class App
     end
   end
 
-  def create_student
+  def create_student 
     puts 'Creaate a new student'
     print 'Enter name: '
     name = gets.chomp
@@ -80,5 +80,52 @@ class App
     teacher = Teacher.new(age, specialization, name)
     @person << teacher
     puts 'Teacher created successfully'
+  end
+
+  def create_book
+    puts 'Create a new book'
+    print 'Enter title: '
+    title = gets.chomp
+    Print 'Enter an author: '
+    author = gets.chomp
+    book = Book.new(title, author)
+    @books.push(book)
+    puts "Book #{title} created successfully."
+  end
+
+  def create_rental
+    puts 'Select which book you want to rent by entering its number'
+    @books.each_with_index { |_book, index| puts "[#{index}] Title: #{books.title} Author: #{books.author}" }
+
+    book_id = gets.chomp.to_i
+
+    Puts 'Select a person from the list by its number'
+    @person.each_with_index do |person, index|
+      puts "[#{index}] [#{person.class.name}] Name: #{person.name} Id: #{person.id} Age: #{person.age}"
+    end
+
+    person_id = gets.chomp.to_i
+
+    print 'Date: '
+    date = gets.chomp.to_s
+
+    rental = Rental.new(date, @persons[person_id], @books[book_id])
+    @rentals << rental
+
+    puts 'Rental created successfully'
+  end
+
+  def list_all_rentals
+    print 'To see person rentals enter the person ID: '
+    id = gets.chomp.to_i
+
+    puts 'Rented books: '
+    @rentals.each do |rental|
+      if rental.person.id == id
+        puts "person: #{rental.person.name} Date: #{rental.date} Book: #{rental.book.title} by #{rental.book.author}"
+      else
+        puts 'No records where found for the given ID'
+      end
+    end
   end
 end
