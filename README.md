@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# school-library-OOP : Decorate a class
+# school-library-OOP : Add Basic UI
 
 > Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them. The app will allow you to:
 
