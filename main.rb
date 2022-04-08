@@ -6,7 +6,7 @@ def main
 end
 
 def list_of_options
-  puts 'Enter a number from the list of optiions: '
+  puts 'Enter a number from the list of options: '
   puts '1 - List all books'
   puts '2 - List all people'
   puts '3 - Create a person'
