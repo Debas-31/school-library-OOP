@@ -1,3 +1,4 @@
+require 'pry'
 require './app'
 
 def main
@@ -15,9 +16,9 @@ def list_of_options
   puts '6 - List all rentals for a given person id'
   puts '7 - Exit'
 end
-
+binding.pry
 def option(input)
-  case input
+  case 
   when '1'
     list_all_books
   when '2'
@@ -34,5 +35,3 @@ def option(input)
     puts 'please enter a number between 1 and 7'
   end
 end
-
-main
