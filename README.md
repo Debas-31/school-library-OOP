@@ -46,6 +46,9 @@ bundle install
 - [Twitter](https://twitter.com/DEBSH76956492)
 - [LinkedIn](https://www.linkedin.com/in/debas-gebrengus)
 
+👤 **Mithlesh Kumar**
+- GitHub: [@githubhandle](https://github.com/Mithi-code)
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!

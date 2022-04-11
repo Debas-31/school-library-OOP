@@ -1,4 +1,17 @@
 class Console 
+  def start_console
+    puts 'Welcome to my School Library!'
+    until list_of_options
+      input = gets.chomp
+      if input == '7'
+        puts 'Thank you for using my School Library!'
+        break
+      end
+
+      option input
+    end
+  end
+
     def list_of_options
         puts 'Enter a number from the list of options: '
         puts '1 - List all books'
