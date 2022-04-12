@@ -1,10 +1,16 @@
+require './app'
+
 class Console
+  def initialize
+    @app = App.new
+  end
+
   def start_console
     puts 'Welcome to my School Library!'
     until list_of_options
       input = gets.chomp
       if input == '7'
-        puts 'Thank you for using my School Library!'
+        puts 'Thank You for using my School Library!'
         break
       end
 
@@ -13,7 +19,8 @@ class Console
   end
 
   def list_of_options
-    puts 'Enter a number from the list of options: '
+    puts
+    puts 'Choose an option by entering a number: '
     puts '1 - List all books'
     puts '2 - List all people'
     puts '3 - Create a person'
@@ -26,19 +33,19 @@ class Console
   def option(input)
     case input
     when '1'
-      list_all_books
+      @app.list_all_books
     when '2'
-      list_all_persons
+      @app.list_all_persons
     when '3'
-      create_person
+      @app.create_person
     when '4'
-      create_book
+      @app.create_book
     when '5'
-      create_rental
+      @app.create_rental
     when '6'
-      list_all_rentals
+      @app.list_all_rentals
     else
-      puts 'please enter a number between 1 and 7'
+      puts 'Please enter a number between 1 and 7.'
     end
   end
 end

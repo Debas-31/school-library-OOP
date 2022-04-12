@@ -1,8 +1,8 @@
-require './app'
+require './lib/console'
 
 def main
-  app = App.new
-  app.start_console
+  console = Console.new
+  console.start_console
 end
 
 main
