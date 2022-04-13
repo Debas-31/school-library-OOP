@@ -64,4 +64,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-[MIT licensed]().
+[MIT licensed](https://github.com/Debas-31/school-library-OOP/blob/code-refactor/MIT.md).
