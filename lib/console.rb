@@ -1,4 +1,5 @@
 require './app'
+require './lib/save_data'
 
 class Console
   def initialize

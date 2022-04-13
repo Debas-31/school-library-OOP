@@ -8,6 +8,7 @@ require './lib/create_books'
 require './lib/create_persons'
 require './lib/create_rental'
 require './lib/displayer'
+require './lib/load_data'
 
 class App
   def initialize
