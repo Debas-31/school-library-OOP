@@ -11,10 +11,13 @@ require './lib/displayer'
 require './lib/load_data'
 
 class App
+  attr_accessor :books, :rentals, :persons
+
   def initialize
-    @books = []
-    @persons = []
-    @rentals = []
+    initialize_files
+    @books = load_books
+    @persons = load_persons
+    @rentals = load_rentals(@persons, @books)
     @displayer = Displayer.new
   end
 

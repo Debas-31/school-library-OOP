@@ -12,6 +12,7 @@ class Console
       input = gets.chomp
       if input == '7'
         puts 'Thank You for using my School Library!'
+        save_datas(@app.books, @app.persons, @app.rentals)
         break
       end
 

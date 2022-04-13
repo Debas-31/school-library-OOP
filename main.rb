@@ -1,6 +1,6 @@
 require './lib/console'
-require 'json'
 require './book'
+require 'json'
 
 def main
   console = Console.new
